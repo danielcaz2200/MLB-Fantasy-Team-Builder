@@ -4,11 +4,10 @@ import os
 from datetime import date
 
 """
-MLB fantasy team builder created by Daniel Cazarez (2022)
+MLB fantasy team builder created by Daniel Cazarez (2023)
 
-
-To do: calculate fantasy score, optimize code/add filtering method,
-work on DH position and make sure the same player cannot be added twice to a roster
+This project makes use of the MLB Stats API wrapper for Python by Todd Roberts: 
+https://pypi.org/project/MLB-StatsAPI/
 """
 
 
@@ -74,6 +73,7 @@ class MLBFantasyTeam:
                     f'\nThe current fpts for your overall roster is: {self.__fetch_score()}\n')
             elif ans == 'q':
                 self.__clear_screen()
+                print('Goodbye!\n')
                 break
             else:
                 print('Please choose one of the options\n')
